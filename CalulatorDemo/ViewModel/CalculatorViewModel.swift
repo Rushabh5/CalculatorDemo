@@ -37,13 +37,6 @@ extension ContentView {
             case .clear:
                 calculator.allClear()
             }
-        }
-        
-        // MARK: - Helpers
-        /// Checks if current buttonType of type .arithmeticOperation is active
-        func buttonTypeIsHighlighted(buttonType: ButtonTypes) -> Bool {
-            guard case .operation(let operation) = buttonType else { return false}
-            return calculator.operationIsHighlighted(operation)
-        }
+        }        
     }
 }

@@ -118,10 +118,6 @@ struct CalculatorModel {
     
     
     // MARK: - Helpers
-    func operationIsHighlighted(_ operation: ArithmeticOperations) -> Bool {
-        return expression?.operation == operation && newNumber == nil
-    }
-    
     private func getNumberString(forNumber number: Decimal?, withCommas: Bool = false) -> String {
         var numberString = (withCommas ? number?.formatted(.number) : number.map(String.init)) ?? "0"
         
